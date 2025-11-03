@@ -1,0 +1,192 @@
+/* --- Keyframes (Mantido) --- */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- Estilos Globais, Tipografia e Grid para Centralização --- */
+body {
+    font-family: 'Press Start 2P', cursive, monospace;
+    color: #222;
+    margin: 0;
+    
+    background: #E8F0F7; 
+    background-image: 
+        radial-gradient(circle at 100% 100%, #BFE7BA 0%, #E8F0F7 50%),
+        radial-gradient(circle at 0% 0%, #BFE7BA 0%, #E8F0F7 50%);
+    
+    display: grid;
+    place-items: center; 
+    min-height: 60vh;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 1.2em;
+    color: #4A4A4A;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px; /* Reduzido para aproximar do Treinador */
+    text-align: center;
+}
+
+.hud-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    max-width: 600px;
+}
+
+/* --- Estilos do Treinador --- */
+.treinador-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0; /* NOVO: Zera a margem superior */
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 3px solid #333;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#treinador-img {
+    width: 100px; 
+    height: auto;
+    image-rendering: pixelated; 
+    margin-bottom: 5px;
+}
+
+.treinador-container p {
+    font-size: 0.6em;
+    color: #4A4A4A;
+    margin: 0;
+}
+
+
+/* --- Seleção de Botões --- */
+.selecao-pokemon {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.botao-pkm {
+    padding: 8px 12px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+    border: 3px solid #333;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s;
+    box-shadow: 2px 2px 0px #333;
+}
+
+.botao-pkm:hover {
+    background-color: #d8d8d8;
+    box-shadow: 1px 1px 0px #333;
+    transform: translate(1px, 1px);
+}
+
+/* --- Cartão Pokédex --- */
+.cartao-pokedex {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    animation: fadeInScale 0.5s ease-out forwards;
+}
+
+.oculto {
+    display: none;
+}
+
+.glass-efeito {
+    background: rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 3px solid #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.pkm-info-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+}
+
+#pkm-nome {
+    margin: 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+#pkm-numero {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.pkm-info-corpo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    font-size: 0.6em;
+}
+
+.imagem-container {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    background: #fff;
+    border-radius: 50%;
+    border: 5px solid #d8d8d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pkm-imagem {
+    max-width: 90%;
+    height: auto;
+    animation: float 3s ease-in-out infinite; 
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+.pkm-tag {
+    font-weight: bold;
+    font-size: 0.7em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    margin: 15px 0 10px 0;
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 0px #333;
+}
+
+/* Cores por Tipo */
+.grass { background-color: #7AC74C; }
+.fire { background-color: #EE8130; }
+.water { background-color: #6390F0; }

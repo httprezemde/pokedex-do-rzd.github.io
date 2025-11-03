@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Kanto Starters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Pokédex do RZD</h1>
+    </header>
+
+    <div class="hud-container">
+        
+        <div class="treinador-container">
+            <img 
+                id="treinador-img" 
+                src="https://play.pokemonshowdown.com/sprites/trainers/erbie-unite.png" 
+                alt="Treinador Negro"
+            >
+            <p>Escolha seu Pokémon inicial!</p>
+        </div>
+
+        <div class="selecao-pokemon">
+            <button class="botao-pkm" onclick="exibirPokemon('bulbasaur')">Bulbasaur</button>
+            <button class="botao-pkm" onclick="exibirPokemon('charmander')">Charmander</button>
+            <button class="botao-pkm" onclick="exibirPokemon('squirtle')">Squirtle</button>
+        </div>
+
+        <div id="cartao-pokedex" class="cartao-pokedex oculto"> 
+            
+            <div class="glass-efeito">
+                <div class="pkm-info-cabecalho">
+                    <h2 id="pkm-nome"></h2>
+                    <span id="pkm-numero"></span>
+                </div>
+                
+                <div class="pkm-info-corpo">
+                    <div class="imagem-container">
+                        <img id="pkm-imagem" src="" alt="Imagem do Pokémon">
+                    </div>
+
+                    <p id="pkm-tipo" class="pkm-tag"></p>
+                    <p id="pkm-descricao"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
